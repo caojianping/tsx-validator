@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tsx-validator测试</title>
+  </head>
+  <body>
+    <script src="../dist/validator.umd.js"></script>
+    <script>
+      var Validator = window.Validator;
+      if (Validator) {
+        var key = 'test';
+        var validator = new Validator();
+        var account = '张三';
+        validator.addRule(
+          key,
+          { name: 'account', value: account },
+          { required: true },
+          { required: '用户名不可以为空' }
+        );
+        var password = '';
+        validator.addRule(
+          key,
+          { name: 'password', value: password },
+          { required: true },
+          { required: '密码不可以为空' }
+        );
+
+        var result = validator.execute(key);
+        console.log('Validator:', result);
+      }
+    </script>
+  </body>
+</html>

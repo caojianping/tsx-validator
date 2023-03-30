@@ -1,0 +1,49 @@
+{
+  "name": "tsx-validator",
+  "version": "1.0.0",
+  "description": "TypeScript版本的验证器Validator，提供简单的正则、长度、大小、范围、数字、字符、日期等验证功能，同时支持验证规则的自定义扩展。",
+  "main": "dist/validator.common.min.js",
+  "module": "dist/validator.esm.min.js",
+  "unpkg": "dist/validator.umd.min.js",
+  "jsdelivr": "dist/validator.umd.min.js",
+  "types": "types/index.d.ts",
+  "files": [
+    "dist",
+    "types",
+    "examples"
+  ],
+  "scripts": {
+    "build": "rollup -c rollup.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caojianping/tsx-validator.git"
+  },
+  "keywords": [
+    "Validator",
+    "TypeScript",
+    "JavaScript",
+    "Node.js"
+  ],
+  "author": "caojianping",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caojianping/tsx-validator/issues"
+  },
+  "homepage": "https://github.com/caojianping/tsx-validator#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^21.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.0.5",
+    "@typescript-eslint/parser": "^4.33.0",
+    "rollup": "^2.58.0",
+    "rollup-plugin-eslint": "^7.0.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "typescript": "^4.4.3"
+  },
+  "buildOptions": {
+    "name": "Validator"
+  }
+}
